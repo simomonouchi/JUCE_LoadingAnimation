@@ -5,6 +5,10 @@
   <MAINGROUP id="ABqWbF" name="LoadingAnimation">
     <GROUP id="{8A5FD65C-0CA4-C336-C954-BC04A6CFE792}" name="Source">
       <FILE id="Nx9OTr" name="ArcSpiner.cpp" compile="1" resource="0" file="../Source/ArcSpiner.cpp"/>
+      <FILE id="IyWuBE" name="HorizontalDotBlinker.cpp" compile="1" resource="0"
+            file="../Source/HorizontalDotBlinker.cpp"/>
+      <FILE id="gNUbyj" name="HorizontalDotBlinker.h" compile="0" resource="0"
+            file="../Source/HorizontalDotBlinker.h"/>
       <FILE id="P32mIV" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="poUHbg" name="ArcSpiner.h" compile="0" resource="0" file="../Source/ArcSpiner.h"/>
       <FILE id="jzevs0" name="GUIMain.cpp" compile="1" resource="0" file="Source/GUIMain.cpp"/>

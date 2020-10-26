@@ -37,6 +37,12 @@ GUIMain::GUIMain ()
 
     loadingAnimation->setBounds (40, 32, 120, 120);
 
+    juce__component.reset (new HorizontalDotBlinker());
+    addAndMakeVisible (juce__component.get());
+    juce__component->setName ("new component");
+
+    juce__component->setBounds (240, 32, 120, 120);
+
 
     //[UserPreSize]
     //[/UserPreSize]
@@ -54,6 +60,7 @@ GUIMain::~GUIMain()
     //[/Destructor_pre]
 
     loadingAnimation = nullptr;
+    juce__component = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -140,6 +147,18 @@ void GUIMain::paint (juce::Graphics& g)
 
     }
 
+    {
+        int x = 209, y = 156, width = 184, height = 30;
+        juce::String text (TRANS("Horizontal Dot Blinker"));
+        juce::Colour fillColour = juce::Colours::white;
+        //[UserPaintCustomArguments] Customize the painting arguments here..
+        //[/UserPaintCustomArguments]
+        g.setColour (fillColour);
+        g.setFont (juce::Font (15.00f, juce::Font::plain).withTypefaceStyle ("Regular"));
+        g.drawText (text, x, y, width, height,
+                    juce::Justification::centred, true);
+    }
+
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
 }
@@ -188,9 +207,15 @@ BEGIN_JUCER_METADATA
           strokeColour="solid: ffeee9fc"/>
     <RECT pos="401 204 200 200" fill="solid: ffffff" hasStroke="1" stroke="5, mitered, butt"
           strokeColour="solid: ffeee9fc"/>
+    <TEXT pos="209 156 184 30" fill="solid: ffffffff" hasStroke="0" text="Horizontal Dot Blinker"
+          fontname="Default font" fontsize="15.0" kerning="0.0" bold="0"
+          italic="0" justification="36"/>
   </BACKGROUND>
   <GENERICCOMPONENT name="" id="b45d9c2a159401ec" memberName="loadingAnimation" virtualName=""
                     explicitFocusOrder="0" pos="40 32 120 120" class="ArcSpiner"
+                    params=""/>
+  <GENERICCOMPONENT name="new component" id="bbe1df1153f44c39" memberName="juce__component"
+                    virtualName="" explicitFocusOrder="0" pos="240 32 120 120" class="HorizontalDotBlinker"
                     params=""/>
 </JUCER_COMPONENT>
 

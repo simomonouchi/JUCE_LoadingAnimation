@@ -22,6 +22,7 @@
 //[Headers]     -- You can add your own extra header files here --
 #include <JuceHeader.h>
 #include "ArcSpiner.h"
+#include "HorizontalDotBlinker.h"
 //[/Headers]
 
 
@@ -56,6 +57,7 @@ private:
 
     //==============================================================================
     std::unique_ptr<ArcSpiner> loadingAnimation;
+    std::unique_ptr<HorizontalDotBlinker> juce__component;
 
 
     //==============================================================================
